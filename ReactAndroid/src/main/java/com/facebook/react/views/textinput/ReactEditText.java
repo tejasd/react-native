@@ -110,7 +110,7 @@ public class ReactEditText extends EditText {
   public boolean onKeyUp(int keyCode, KeyEvent event) {
     if (keyCode == KeyEvent.KEYCODE_ENTER &&
         ((getInputType() & InputType.TYPE_TEXT_FLAG_MULTI_LINE) == 0 )) {
-      hideSoftKeyboard();
+      clearFocus();
       return true;
     }
     return super.onKeyUp(keyCode, event);
